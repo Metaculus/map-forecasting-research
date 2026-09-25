@@ -1,0 +1,9 @@
+question_id,title,type,options,metadata,range_min,range_max,zero_point,example_pmf
+A,Council approves the electric-bus budget by 2027,binary,,{},,,,"[0.6, 0.4]"
+B,Majority of the city's buses are electric by 2030,binary,,{},,,,"[0.65, 0.35]"
+notA,Council does NOT approve the budget by 2027,binary,,"{""format"": ""consistency_question"", ""info"": {""consistency_type"": ""conditional"", ""parent_ids"": [""A""]}}",,,,"[0.45, 0.55]"
+AorB,A or B,binary,,"{""format"": ""consistency_question"", ""info"": {""consistency_type"": ""conditional"", ""parent_ids"": [""A"", ""B""], ""logical_form"": ""P(A\u2228B)""}}",,,,"[0.45, 0.55]"
+AandB,A and B,binary,,"{""format"": ""consistency_question"", ""info"": {""consistency_type"": ""conditional"", ""parent_ids"": [""A"", ""B""], ""logical_form"": ""P(A\u2227B)""}}",,,,"[0.75, 0.25]"
+BgivenA,"B, if A",binary,,"{""format"": ""consistency_question"", ""info"": {""consistency_type"": ""conditional"", ""parent_ids"": [""A"", ""B""], ""logical_form"": ""P(B|A)""}}",,,,"[0.3, 0.7]"
+BgivennotA,"B, if not A",binary,,"{""format"": ""consistency_question"", ""info"": {""consistency_type"": ""conditional"", ""parent_ids"": [""A"", ""B""], ""logical_form"": ""P(B|\u00acA)""}}",,,,"[0.85, 0.15]"
+AgivenB,"A, if B",binary,,"{""format"": ""consistency_question"", ""info"": {""consistency_type"": ""conditional"", ""parent_ids"": [""A"", ""B""], ""logical_form"": ""P(A|B)""}}",,,,"[0.2, 0.8]"

@@ -1,0 +1,68 @@
+{
+ "name": "generated",
+ "meta": {
+  "project_title": "City bus fleet electrification"
+ },
+ "nodes": {
+  "electric_majority": {
+   "title": "More than half the bus fleet is electric by 2030",
+   "desc": "",
+   "is_main": true,
+   "node_type": "custom"
+  },
+  "funding": {
+   "title": "City funding for new electric buses",
+   "desc": "Includes council budget and outside grants",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "battery_prices": {
+   "title": "Falling battery prices",
+   "desc": "",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "charging_infra": {
+   "title": "Charging infrastructure at depots",
+   "desc": "",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "driver_training": {
+   "title": "Drivers and mechanics are trained",
+   "desc": "",
+   "is_main": false,
+   "node_type": "custom"
+  }
+ },
+ "edges": [
+  {
+   "source": "funding",
+   "target": "electric_majority",
+   "type": "necessary",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "battery_prices",
+   "target": "funding",
+   "type": "causal",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "charging_infra",
+   "target": "electric_majority",
+   "type": "necessary",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "driver_training",
+   "target": "electric_majority",
+   "type": "causal",
+   "directed": true,
+   "provenance": {}
+  }
+ ]
+}

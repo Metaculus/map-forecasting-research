@@ -1,0 +1,94 @@
+{
+ "name": "reference",
+ "meta": {
+  "project_title": "City bus fleet electrification"
+ },
+ "nodes": {
+  "goal": {
+   "title": "Majority of city buses electric by 2030",
+   "desc": "",
+   "is_main": true,
+   "node_type": "custom"
+  },
+  "budget": {
+   "title": "Council approves the electric-bus budget",
+   "desc": "Capital budget for fleet replacement",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "battery_cost": {
+   "title": "Battery pack cost per kWh keeps falling",
+   "desc": "",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "depot_charging": {
+   "title": "Depot charging capacity is built",
+   "desc": "Grid connections and chargers at depots",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "grid_upgrade": {
+   "title": "Utility completes the grid upgrade",
+   "desc": "",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "pilot": {
+   "title": "Neighbouring city's pilot succeeds",
+   "desc": "Evidence that the technology works locally",
+   "is_main": false,
+   "node_type": "custom"
+  },
+  "federal_grants": {
+   "title": "Federal grants cover part of the cost",
+   "desc": "",
+   "is_main": false,
+   "node_type": "custom"
+  }
+ },
+ "edges": [
+  {
+   "source": "budget",
+   "target": "goal",
+   "type": "necessary",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "battery_cost",
+   "target": "budget",
+   "type": "causal",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "depot_charging",
+   "target": "goal",
+   "type": "necessary",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "grid_upgrade",
+   "target": "depot_charging",
+   "type": "necessary",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "pilot",
+   "target": "budget",
+   "type": "evidential",
+   "directed": true,
+   "provenance": {}
+  },
+  {
+   "source": "federal_grants",
+   "target": "budget",
+   "type": "causal",
+   "directed": true,
+   "provenance": {}
+  }
+ ]
+}
