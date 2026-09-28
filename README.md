@@ -186,4 +186,4 @@ pydantic-ai agents. Both need `RADIANT_BASE_URL` and `RADIANT_API_KEY`.
 
 ## License
 
-Not yet chosen.
+BSD 2-Clause. See [LICENSE](LICENSE).

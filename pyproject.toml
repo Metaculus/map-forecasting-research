@@ -8,6 +8,8 @@ version = "0.1.0"
 description = "Consistency checks for probability estimates, and tools to build, clean and grade causal forecasting maps and key factors."
 readme = "README.md"
 requires-python = ">=3.10"
+license = "BSD-2-Clause"
+license-files = ["LICENSE"]
 dependencies = [
     "numpy",
     "scipy",
