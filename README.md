@@ -1,6 +1,6 @@
 # map-forecasting
 
-Tools for forecasting with causal maps, from Metaculus's SCRY-AI project (ARIA, 2025–2026):
+Tools for forecasting with causal maps:
 
 - **Consistency checks** for probability estimates on linked questions: how much a
   bettor could win for sure against a set of forecasts, and the nearest coherent set.
