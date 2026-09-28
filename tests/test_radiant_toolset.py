@@ -6,12 +6,13 @@ import asyncio
 import logging
 from typing import Any
 
-import httpx
 import pytest
-from pydantic_ai import RunContext
-from pydantic_ai.toolsets import AbstractToolset
 
 pytest.importorskip("pydantic_ai")
+
+import httpx  # noqa: E402
+from pydantic_ai import RunContext  # noqa: E402
+from pydantic_ai.toolsets import AbstractToolset  # noqa: E402
 
 from map_forecasting.radiant.toolset import (  # noqa: E402
     _ENTER_MAX_ATTEMPTS,
